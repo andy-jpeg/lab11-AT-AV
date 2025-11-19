@@ -13,10 +13,10 @@ def test_add():
     assert add(0, 0) ==0
 
 def test_subtract():
-    assert substract(9, 3)== 6
-    assert substract(5, -3)== 8
-    assert substract(4, -6) == -2
-    assert substract(-1, -1)== -2
+    assert subtract(9, 3)== 6
+    assert subtract(5, -3)== 8
+    assert subtract(4, -6) == -2
+    assert subtract(-1, -1)== -2
 
 
 def test_divide_by_zero():
