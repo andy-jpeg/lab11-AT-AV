@@ -7,7 +7,7 @@ import math
 def add(a, b):
     return a + b
 
-def sub(a, b):
+def substract(a, b):
     return a - b
 
 def mul(a, b):
@@ -20,7 +20,7 @@ def div(a, b):
     except ZeroDivisionError as error:
         print("Zero division error")
 
-def log(a, b):
+def logarithm(a, b):
     try:
         result = math.log(a, b)
         return result
