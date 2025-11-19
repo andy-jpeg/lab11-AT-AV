@@ -18,7 +18,7 @@ def div(a, b):
         result = b / a
         return result
     except ZeroDivisionError as error:
-        print("Zero divsion error")
+        print("Zero division error")
 
 def log(a, b):
     try:
