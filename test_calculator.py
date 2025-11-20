@@ -2,9 +2,7 @@
 # Partner 1: Andy Tran
 # Partner 2: Augusto Valero
 
-
 from calculator import *
-
 
 def test_add():
     assert add(3, 6)== 9
@@ -18,7 +16,6 @@ def test_subtract():
     assert subtract(4, -6) == -2
     assert subtract(-1, -1)== -2
 
-
 def test_divide_by_zero():
     try:
         div(0,10)
@@ -27,10 +24,8 @@ def test_divide_by_zero():
         pass
 
 def test_logarithm():
-
     result1 = logarithm(10, 100)
     assert result1 == 2
-
 
     result2 = logarithm(2, 8)
     assert result2 == 3

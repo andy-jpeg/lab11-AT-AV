@@ -29,3 +29,13 @@ def logarithm(a, b):
 
 def exp(a, b):
     return a ** b
+
+def square_root(a):
+    try:
+        result = math.sqrt(a)
+        return result
+    except ValueError as error:
+        print(error)
+
+def hypotenuse(a, b):
+    return math.hypot(a, b)
