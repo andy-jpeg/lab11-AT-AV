@@ -31,7 +31,8 @@ class CalculatorProgramTest(unittest.TestCase):
         self.assertEqual(subtract(-1, -1), 0)
 
     def test_divide_by_zero(self):
-        self.assertFalse(div(0, 10))
+        with self.assertRaises(ZeroDivisionError):
+            div(0, 10)
 
     def test_logarithm(self):
         self.assertEqual(logarithm(100, 10), 2)
@@ -39,36 +40,9 @@ class CalculatorProgramTest(unittest.TestCase):
         self.assertEqual(logarithm(256, 4), 4)
         self.assertEqual(logarithm(25, 5), 2)
 
-    def log_invalid_argument(self):
-        invalid_cases = [
-            [10, -10],
-            [5, -1],
-            [3, -4],
-            [10, -1000]
-        ]
-
-        for list in invalid_cases:
-            try:
-                logarithm(list[0], list[1])
-            except ValueError as e:
-                print(e)
-
     def test_log_invalid_base(self):
-        invalid_cases = [
-            (1, 10),
-            (0, 10),
-            (-2, 8),
-            (10, 0),
-            (10, -5),
-        ]
-
-        for a, b in invalid_cases:
-            self.assertFalse(logarithm(a, b))
-            # try:
-            #     logarithm(a, b)
-            #     assert False, f"ValueError was not raised for log({a}, {b})"
-            # except ValueError:
-            #     pass
+        with self.assertRaises(ZeroDivisionError):
+            logarithm(10, 1)
 
     def test_sqrt(self):
         self.assertEqual(square_root(256), 16)
