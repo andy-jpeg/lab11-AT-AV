@@ -44,6 +44,10 @@ class CalculatorProgramTest(unittest.TestCase):
         with self.assertRaises(ZeroDivisionError):
             logarithm(10, 1)
 
+    def test_log_invalid_argument(self):
+        with self.assertRaises(ValueError):
+            logarithm(10, 0)
+
     def test_sqrt(self):
         self.assertEqual(square_root(256), 16)
         self.assertAlmostEqual(square_root(24), 4.89897949)

@@ -23,6 +23,10 @@ def div(a, b):
 
 def logarithm(a, b):
     result = math.log(a, b)
+
+    if b == 0:
+        raise ValueError
+
     return result
 
 def exp(a, b):
